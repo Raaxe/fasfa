@@ -2414,9 +2414,5 @@ client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","member"));
     });
 
- client.on('message', msg => {//msg
-    if (msg.content === `-colors`) {
-      msg.channel.send({file : "https://cdn.pg.sa/LU0gBeembE.jpg"})
-    }
 
 client.login(process.env.BOT_KEY);
