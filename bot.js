@@ -2414,5 +2414,12 @@ client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","member"));
     });
 
+client.on('ready', () => {
+    setInterval(function(){
+        client.guilds.get('514973273633587202').roles.find('name', '..').edit({color: 'RANDOM'})
+    },12000);
+  
+
+})
 
 client.login(process.env.BOT_KEY);
