@@ -25,51 +25,10 @@ const sql = require("sqlite");
  const pretty = require('pretty-ms') 
 
 
-client.on('message' , message => {
-  var prefix = "-";
-  if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "ping")) {
- message.channel.send('Pong...').then((msg) => {
-      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
- })
-  }  
-}); 
-
-
-
-
-
-
-
-
-
-client.on('message', message => {
-var prefix = "-"
-    if(message.content.startsWith (prefix  + 'members')) {
-        if(!message.channel.guild) return;
-      let embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-            .setThumbnail(message.author.avatarURL)
-        .setFooter(message.author.username, message.author.avatarURL) 
-  
-      .setDescription(`**:battery: حالة اعضاء السيرفر**
-  **:green_heart: Online**  **[ ${message.guild.members.filter(m=>m.presence.status == 'online').size} ]**
-  **:yellow_heart: Idle**       **[ ${message.guild.members.filter(m=>m.presence.status == 'idle').size} ]**  
-  **:heart: DND**     **[ ${message.guild.members.filter(m=>m.presence.status == 'dnd').size} ]**
-  **:black_heart: Offline** **[ ${message.guild.members.filter(m=>m.presence.status == 'offline').size} ]** `)
-  
-          message.channel.send()
-  
-  message.channel.sendEmbed(embed)
-  }
-  });
-
 
 
 	
 
-	
-	
 	
 
 
