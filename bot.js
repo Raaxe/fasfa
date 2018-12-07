@@ -25,7 +25,7 @@ const sql = require("sqlite");
  const pretty = require('pretty-ms') 
 
 
-lient.on('message' , message => {
+client.on('message' , message => {
   var prefix = "-";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
